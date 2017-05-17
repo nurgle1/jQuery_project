@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  $('body').html('<h1 style="font-face: Georgia; color: #666; text-align: center">Welcome to my jQuery Project!</p>')
   createContainer();
   createGrid();
   hoverTrail();
+  createButton();
 });
 
 function createContainer() {
@@ -30,11 +30,16 @@ function createGrid(){
               float: 'left',
               opacity: '0.1',
             });
-
-      }}};
+        }
+  }
+};
 
 function hoverTrail(){
   $('.unit').mouseover(function(){
     $(this).fadeTo('fast',1);
   });
 };
+
+function createButton(){
+  $('.container').before('<button>Clear</button>');
+}
