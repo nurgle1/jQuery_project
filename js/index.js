@@ -2,7 +2,6 @@ $(document).ready(function(){
   createContainer();
   createGrid();
   hoverTrail();
-  createButton();
 });
 
 function createContainer() {
@@ -40,6 +39,8 @@ function hoverTrail(){
   });
 };
 
-function createButton(){
-  $('.container').before('<button>Clear</button>');
+function resetGrid(){
+  $('.unit').remove();
+  createGrid();
+  hoverTrail();
 }
